@@ -47,7 +47,7 @@ angular.module('resume',[])
 					endDate: new Date(2014, 5, 1),
 					projects: [{
 						name: "ebayanihan.org",										
-						technologies: ["Java", "AngularJS","bootstrap"],
+						technologies: ["Java", "AngularJS","Bootstrap", "PostgresSQL"],
 						description: "An online portal where users can post projects (e.g. Feeding Program) to look for sponsors and also post the records such as budgets and expenses for transparency.",
 						contributions: [
 							"Implemented a RESTful website using Java EE for server-side and AngularJS for the front-end"
