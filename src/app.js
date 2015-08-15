@@ -31,7 +31,7 @@ angular.module('resume',[])
 						name: "Scrumonline",
 						url: "http://node.Scrumonline.net",
 						description: "Scrum tool for tracking of projects' status and tasks management with additional features such as time entry system, and payroll system.",
-						technologies: ["NodeJs","faye", "MongoDB", "BackboneJS","JQuery", "Bootstrap", "Handlebars", "Momentjs"],
+						technologies: ["NodeJs","Faye", "MongoDB", "BackboneJS","JQuery", "Bootstrap", "Handlebars", "momentjs"],
 						contributions: [
 							"Implemented the real time updates of views of different client browsers whenever fields were modified by a user. Used 'Faye messaging' as communication tool between client and server.",
 							"Implemented the upload and download of file attachments using AJAX, and MongoDB GridFS",
