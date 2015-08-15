@@ -8,7 +8,7 @@ angular.module('resume',[])
 			emailAddress: "kenneth.bolico@gmail.com",
 			facebook: "facebook.com/kenneth.bolico",
 			github: "github.com/kenblizzard",
-			objective: "I am a Web Developer with passion in creating website using Javascript technologies and is willing to learn alot more to become a talented Full Stack Developer in the near future. Also, I love codes and pizzas.",
+			objective: "I am a Web Developer with passion in creating website using Javascript technologies and is willing to learn alot more to become a talented Full Stack Web Developer in the near future. Also, I love codes and pizzas.",
 			education: {
 				school: "Polytechnic University of the Philippines",
 				location: "Sta. Mesa, Manila",
@@ -16,10 +16,10 @@ angular.module('resume',[])
 				year: "2011 - 2015"
 			},
 			technologies: {				
-				webDev: ["HTML5","CSS","Javascript","NodeJs","JQuery", "AngularJS", "BackboneJS", "Bootstrap", "momentjs", "Handlebars"],
+				webDev: ["HTML5","CSS","Javascript","NodeJs","JQuery", "AngularJS", "BackboneJS", "Bootstrap", "momentjs", "Handlebars", "Faye"],
 				packageManagers: ["NPM", "Bower"],
 				taskRunner: ["Grunt"],
-				withBackground: ["Java", "C"],
+				withBackground: ["Java", "C_Sharp"],
 				database: ["MongoDB", "PostgresSQL", "MySQL"]
 			},
 			experience: [
@@ -31,9 +31,9 @@ angular.module('resume',[])
 						name: "Scrumonline",
 						url: "node.Scrumonline.net",
 						description: "Scrum tool for tracking of projects' status and tasks management with additional features such as time entry system, and payroll system.",
-						technologies: ["NodeJs","Faye", "MongoDB", "BackboneJS","JQuery", "Bootstrap", "Handlebars", "Momentjs"],
+						technologies: ["NodeJs","faye", "MongoDB", "BackboneJS","JQuery", "Bootstrap", "Handlebars", "Momentjs"],
 						contributions: [
-							"Implemented the real time updates of views of different client browsers whenever fields were modified by a user.",
+							"Implemented the real time updates of views of different client browsers whenever fields were modified by a user. Used 'Faye messaging' as communication tool between client and server.",
 							"Coded the upload and download of file attachments using AJAX, and MongoDB GridFS",
 							"Setup 'Strider CI', a Continous Integration system for automated build and testing of the repository.",
 							"Implemented automated email notification using 'nodemailer.js'"
@@ -47,7 +47,7 @@ angular.module('resume',[])
 					projects: [{
 						name: "ebayanihan.org",										
 						technologies: ["Java", "AngularJS"],
-						description: "An online portal where users can post projects (e.g. Feeding Program) to look for sponsors",
+						description: "An online portal where users can post projects (e.g. Feeding Program) to look for sponsors and also post the records such as budgets and expenses for transparency.",
 						contributions: [
 							"Implemented a RESTful website using Java EE for server-side and AngularJS for the front-end"
 						]

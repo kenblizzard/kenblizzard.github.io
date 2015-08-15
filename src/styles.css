@@ -1,15 +1,15 @@
 body {
-	margin-top: 40px;
-	background: -webkit-linear-gradient(white, blue); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(white, blue); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(white, blue); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(120deg,white,#CCFFFF, #33CCFF,#00CCFF); /* Standard syntax */
-  	  background-position: center center;
+	margin-top: 10px;
+	background: -webkit-linear-gradient(120deg,white,#CCFFFF, #33CCFF,#00CCFF, #CCFFFF); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(120deg,white,#CCFFFF, #33CCFF,#00CCFF, #CCFFFF); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(120deg,white,#CCFFFF, #33CCFF,#00CCFF, #CCFFFF); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(120deg,white,#CCFFFF, #33CCFF,#00CCFF, #CCFFFF); /* Standard syntax */
+  	background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-	height: 100%;
-	width: 100%;
+
+	font-family: Consolas;
 }
 
 
@@ -18,11 +18,53 @@ li.logo-holder {
 	max-width: 60px;
 	
 	display: inline-block;
-	margin: 10px 15px 0px 15px;
+	margin: 5px 15px 0px 11px;
 }
 
 
-.logo {
+li.logo-holder  .logo {
 	height: 40px;
 	width: 40px;
+}
+
+.project.logo {
+	height: 40px;
+	width: 40px;
+	margin-right: 10px;
+}
+
+img.owner-pic {
+	max-width: 200px;
+	max-height: 200px;	
+}
+
+div.footer {
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+	height: 120px;
+	margin: 0 auto 10px auto;
+	width: 50%;
+}
+
+.footer img {
+	height: 80px;
+	width: 100px;
+}
+
+@media all and (max-width:768px) {
+	img.owner-pic {
+		float: left;
+		height: 175px;		
+	}
+
+	div.logo-group {
+		float: left;
+		display: inline-block;
+	}
+}
+
+@media print {
+	.footer {
+		display: none;
+		visibility: hidden;
+	}
 }
