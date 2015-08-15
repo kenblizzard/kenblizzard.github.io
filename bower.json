@@ -1,0 +1,34 @@
+{
+  "name": "resume",
+  "version": "1",
+  "homepage": "https://github.com/kenblizzard/resume",
+  "authors": [
+    "kenblizzard <kenneth.bolico@gmail.com>"
+  ],
+  "description": "Resume",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "resume",
+    "kenneth",
+    "bolico",
+    "kenblizzard"
+  ],
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "fontawesome": "~4.4.0",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4"
+  }
+}

@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Kenneth Bolico</title>
+	<link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components\fontawesome\css\font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="src\styles.css">
+	<script type="text/javascript" src="bower_components\angular\angular.js"></script>
+	<script type="text/javascript" src="src\app.js"></script>
+</head>
+<body ng-app="resume" ng-controller="MainController">
+<div class="container">
+	<div class="col-md-4 " >
+		<div class="text-right">
+			<img src="https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/11112941_969227929768979_9115772204709869925_n.jpg?oh=eb54fd73b6e34149f831d259de4b99ba&oe=5675EAF5" class="img img-thumbnail">
+			<h1 class="text-right">{{resumeDetails.name}}</h1>
+			<h5 class="text-right"><i class="fa fa-home fa-lg"></i> {{resumeDetails.address}}</h5>
+			<h5 class="text-right"><i class="fa fa-envelope-o "></i> {{resumeDetails.emailAddress}}</h5>
+			<h5 class="text-right"><i class="fa fa-mobile fa-lg"></i> {{resumeDetails.cellphoneNum}}</h5>
+			<h5 class="text-right"><i class="fa fa-github-square fa-lg"></i> {{resumeDetails.github}}</h5>
+			<h5 class="text-right"><i class="fa fa-facebook-official fa-lg"></i> {{resumeDetails.facebook}}</h5>
+			<hr>
+		</div>
+		<h2>Technologies</h2>	
+		<h3>Development Tools</h3>
+		<ul>
+			<li class="logo-holder" ng-repeat="tool in resumeDetails.technologies.webDev"> <img src=".\src\logos\{{tool}}.svg" class="logo">{{tool}}</li>
+		</ul>		
+		<h3>Database</h3>
+		<ul>
+			<li class="logo-holder" ng-repeat="db in resumeDetails.technologies.database"> <img src=".\src\logos\{{db}}.svg" class="logo"> {{db}}</li>
+		</ul>
+		<h3>Package Managers</h3>
+		<ul>			
+			<li class="logo-holder" ng-repeat="packageManager in resumeDetails.technologies.packageManagers"> <img src=".\src\logos\{{packageManager}}.svg" class="logo"> {{packageManager}}</li>
+		</ul>
+		<h3>Task Runner</h3>
+		<ul>			
+			<li class="logo-holder" ng-repeat="taskRunner in resumeDetails.technologies.taskRunner"> <img src=".\src\logos\{{taskRunner}}.svg" class="logo"> {{taskRunner}}</li>
+		</ul>
+		<h3>With backgrounds in</h3>
+		<ul>			
+			<li class="logo-holder" ng-repeat="withBackground in resumeDetails.technologies.withBackground"> <img src=".\src\logos\{{withBackground}}.svg" class="logo">{{withBackground}}</li>
+		</ul>
+	</div>
+	<div class="col-md-8" style="border-left: dotted black 3px">
+		<h2>Objective</h2>
+		<p>{{resumeDetails.objective}}</p>
+		<hr>
+
+		<h2>Education</h2>
+		<h3>{{resumeDetails.education.school}}</h3>
+		<p>{{resumeDetails.education.location}}</p>
+		<p>{{resumeDetails.education.course}} <small>{{resumeDetails.education.year}}</small></p>
+
+		<hr>
+		<h2>Experiences</h2>
+		<div ng-repeat="exp in resumeDetails.experience">
+			<h3>{{exp.employer}} <small class="pull-right">{{exp.startDate | date: "MMM dd yyyy"}} - {{exp.endDate | date: "MMM dd yyyy"}}</small></h3>
+			<h4>Projects</h4>
+			<ul>
+				<li ng-repeat="project in exp.projects">
+					<h5>{{project.name}}</h5>
+					<p>{{project.url}}</p>
+					<p>{{project.description}}</p>
+					<h4>Technologies Used</h4>
+					<img src="src\logos\{{tech}}.svg" ng-repeat="tech in project.technologies" class="logo">
+					<h4>Contributions</h4>
+					<ul>
+						<li ng-repeat="contrib in project.contributions"> {{contrib}}</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
