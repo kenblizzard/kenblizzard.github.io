@@ -11,16 +11,25 @@ body {
 
 	font-family: Consolas;
 }
+h1, h2, h3, h4 ,h5 {
+	font-family: Courier New;
+}
 
+ul {
+	padding-left: 10px;
+}
 
 li.logo-holder {
 	height: 60px;	
 	max-width: 60px;
 	
 	display: inline-block;
-	margin: 5px 15px 0px 11px;
+	margin: 5px 15px 0px 15px;
 }
 
+.logo:hover {
+	transform:scale(1.2);
+}
 
 li.logo-holder  .logo {
 	height: 40px;
@@ -42,7 +51,7 @@ div.footer {
 	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
 	height: 120px;
 	margin: 0 auto 10px auto;
-	width: 50%;
+	width: 23.5%;
 }
 
 .footer img {
