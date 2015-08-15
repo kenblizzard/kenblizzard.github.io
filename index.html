@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="src\app.js"></script>
 </head>
 <body ng-app="resume" >
-<div class="container" ng-controller="MainController" ng-view>
+<div class="container" ng-controller="MainController" >
 	<div class="col-md-4 " >
 		<div class="text-right">
 			<img src="https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/11112941_969227929768979_9115772204709869925_n.jpg?oh=eb54fd73b6e34149f831d259de4b99ba&oe=5675EAF5" class="img img-rounded owner-pic">
@@ -20,7 +20,7 @@
 			<h5 class="text-right"><i class="fa fa-facebook-official fa-lg"></i> {{resumeDetails.facebook}}</h5>
 			<hr>
 		</div>
-		<h3><b>Technologies</b></h3>	
+		<h3><i class="fa fa-laptop"></i> <b>Technologies</b></h3>	
 		<div class="logo-group col-md-12 col-sm-12 col-xs-12">
 		<h4>Web Development Tools</h4>
 		<ul >
@@ -51,17 +51,17 @@
 		
 	</div>
 	<div class="col-md-8 pull-left" >
-		<h3><b>Objective</b></h3>
+		<h3><i class="fa fa-star"></i> <b>Objective</b></h3>
 		<p>{{resumeDetails.objective}}</p>
 		<hr>
 
-		<h3><b>Education</b></h3>
+		<h3><i class="fa fa-graduation-cap"></i> <b>Education</b></h3>
 		<h4>{{resumeDetails.education.school}} <small class="pull-right">{{resumeDetails.education.year}}</small></h3>
 		<p>{{resumeDetails.education.location}}</p>
 		<p>{{resumeDetails.education.course}} </p>		
 
 		<hr>
-		<h3><b>Experiences</b></h3>
+		<h3><i class="fa fa-certificate"></i> <b>Experiences</b></h3>
 		<div ng-repeat="exp in resumeDetails.experience">
 			<h4><b>{{exp.employer}}</b> <small class="pull-right">{{exp.startDate | date: "MMM dd yyyy"}} - {{exp.endDate | date: "MMM dd yyyy"}}</small></h3>
 			<h4>Projects</h4>
