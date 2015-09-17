@@ -50,7 +50,7 @@ button {
     }
 
 
-.fade.in {
+/*.fade.in {
     visibility: visible;
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
@@ -100,4 +100,4 @@ button {
         opacity: 0;
         -webkit-transform: translateY(endYposition);
     }
-}
+}*/

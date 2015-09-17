@@ -16,15 +16,15 @@
 <body ng-app="resume">
 
     <nav>
-        <button id="navbtn" class="nav-btn grid-button rearrange" style="">
+        <button id="navbtn" class="nav-btn grid-button rearrange " style="">
             <span class="grid"></span>
         </button>
-        <div id="nav-menu" class="container-fluid fade out nav-menu">
-            <a class="col-md-6 col-xs-6 nav-item" href="#/">
+        <div id="nav-menu" class="container-fluid   nav-menu">
+            <a class="col-md-6 col-xs-6 nav-item" href="#/" data-url="index">
                 <i class="fa fa-home fa-5x"></i>
                 <h1><span class="caption">Home</span></h1>
             </a>
-            <a class="col-md-6 col-xs-6  nav-item" href="#/me">
+            <a class="col-md-6 col-xs-6  nav-item" href="#/me" data-url="about">
                 <span class="fa fa-user fa-5x"></span>
                 <h1><span class="caption">About Me</span></h1>
             </a>
@@ -40,21 +40,43 @@
         </div>
     </nav>
     <script>
-        var navBtn = document.getElementById('navbtn');
-        var navMenu = document.getElementById('nav-menu');
+        
+        window.onload = function () {
+            var navBtn = document.getElementById('navbtn');
+            var navMenu = document.getElementById('nav-menu');
+            var navItems = document.getElementsByClassName('nav-item');
 
-        navBtn.onclick = function () {
-            if (navBtn.classList.contains("close")) {
-                navBtn.classList.remove("close");
-                navMenu.classList.add("out");
-                navMenu.classList.remove("in");
+            navBtn.onclick = function () {
+                if (navBtn.classList.contains("close")) {
+                    navBtn.classList.remove("close");                    
+                    navMenu.classList.remove("rollIn");
+                    navMenu.classList.add("rollOut");
+                }
+                else {
+                    navBtn.classList.add("close");
+                    navMenu.classList.add("rollIn");                   
+                    navMenu.classList.remove("rollOut");
+
+                }
             }
-            else {
-                navBtn.classList.add("close");
-                navMenu.classList.add("in");
-                navMenu.classList.remove("out");
+
+            navItems = document.getElementsByClassName('nav-item');
+
+            for (var i = 0; i < navItems.length; i++) {
+                navItems[i].onclick = function () {
+                    
+                    navMenu.classList.add("out");
+                    navMenu.classList.remove("in");
+                    navBtn.classList.remove("close");
+                }
             }
+
+            //navItem.onclick = function () {
+            //    alert();
+            //    alert(navItem.attributes.getNamedItems("data-url"));
+            //}
         }
+        
     </script>
 
     <div class="container" ng-view></div>
