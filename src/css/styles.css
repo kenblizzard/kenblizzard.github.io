@@ -1,0 +1,142 @@
+body {
+    background: -webkit-linear-gradient(120deg,rgb(0,38,58),#CCFFFF, #33CCFF,#00CCFF, rgb(0,38,58)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(120deg,rgb(0,38,58),#CCFFFF, #33CCFF,#00CCFF, rgb(0,38,58)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(120deg,rgb(0,38,58),#CCFFFF, #33CCFF,#00CCFF, rgb(0,38,58)); /* For Firefox 3.6 to 15 */
+    background: rgb(0,38,58);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Segoe UI;
+    color: white;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: Segoe UI;
+    color: rgb(0,175,175);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+b {
+    font-weight: 400;
+}
+
+p {
+    letter-spacing: .75px;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+li.logo-holder {
+    height: 60px;
+    max-width: 60px;
+    display: inline-block;
+    margin: 5px 15px 0px 15px;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+li.logo-holder .logo {
+    height: 40px;
+    width: 40px;
+}
+
+.project.logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+img.owner-pic {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+div.footer {
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+    height: 120px;
+    margin: 0 auto 10px auto;
+    width: 23.5%;
+}
+
+.footer img {
+    height: 80px;
+    width: 100px;
+}
+
+@media all and (max-width:768px) {
+    img.owner-pic {
+        float: left;
+        height: 175px;
+    }
+
+    div.logo-group {
+        float: left;
+        display: inline-block;
+    }
+}
+
+@media print {
+    .footer {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+section.welcome {
+    max-width: 500px;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+nav .container-fluid {
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav .nav-menu {
+    top: 10%;
+    background-color: rgba(0,175,175,0.9) !important;
+    position: fixed;
+    height: 90%;
+    width: 100%;
+    z-index: 100;
+}
+
+    nav .nav-menu > .nav-item {
+        height: 50%;
+        text-align: center;
+        border: rgba(255,255,255,0.5) solid 1px;       
+        
+        padding-top: 5% ;
+    }
+
+        nav .nav-menu > a.nav-item  {
+            color: white !important;
+            text-decoration: none;     
+             
+            
+        }
+
+        nav .nav-menu > a.nav-item:hover {
+            color: rgb(0,175,175) !important;              
+            background-color: rgba(0,38,58,0.8) !important;
+        }
+
+            nav .nav-menu > a.nav-item:hover .caption {
+                color: rgb(0,175,175);
+            }
+
+    nav .nav-menu > .nav-item  .caption{
+        color: rgb(0,38,58) ;
+    }

@@ -1,92 +1,63 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Kenneth Bolico</title>
-	<link rel="stylesheet" type="text/css" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="bower_components\fontawesome\css\font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="src\styles.css">
-	<script type="text/javascript" src="bower_components\angular\angular.min.js"></script>
-	<script type="text/javascript" src="src\app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Kenneth Bolico</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/animated-nav-btn.css" />
+    <!--    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+    <base href="#/"/>
 </head>
-<body ng-app="resume" >
-<div class="container" ng-controller="MainController" >
-	<div class="col-md-4 " >
-		<div class="text-right">
-			<img src="https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/11112941_969227929768979_9115772204709869925_n.jpg?oh=eb54fd73b6e34149f831d259de4b99ba&oe=5675EAF5" class="img img-rounded owner-pic">
-			<h2 class="text-right"><b>{{resumeDetails.name}}</b></h2>
-			<p class="text-right"><i class="fa fa-home fa-lg"></i> {{resumeDetails.address}}</p>
-			<p class="text-right"><i class="fa fa-envelope-o fa-lg"></i> {{resumeDetails.emailAddress}}</p>
-			<p class="text-right"><i class="fa fa-mobile fa-lg"></i> {{resumeDetails.cellphoneNum}}</p>
-			<p class="text-right"><i class="fa fa-github-square fa-lg"></i> {{resumeDetails.github}}</p>
-			<p class="text-right"><i class="fa fa-facebook-official fa-lg"></i> {{resumeDetails.facebook}}</p>
-			<hr>
-		</div>
-		<h3><i class="fa fa-laptop"></i> <b>Technologies</b></h3>	
-		<div class="logo-group col-md-12 col-sm-12 col-xs-12">
-		<h4>Web Development Tools</h4>
-		<ul >
-			<li class="logo-holder" ng-repeat="tool in resumeDetails.technologies.webDev"> <img src=".\src\logos\{{tool}}.svg" class="logo">{{tool}}</li>
-		</ul>		
-		</div>
+<body ng-app="resume">
 
-		<div class="logo-group col-md-12 col-sm-6 col-xs-5">
-		<h4>Database</h4>
-		<ul class="logo-group">
-			<li class="logo-holder" ng-repeat="db in resumeDetails.technologies.database"> <img src=".\src\logos\{{db}}.svg" class="logo"> {{db}}</li>
-		</ul>
-		</div>
+    <nav>
+        <button id="navbtn" class="nav-btn grid-button rearrange" style="">
+            <span class="grid"></span>
+        </button>
+        <div id="nav-menu" class="container-fluid fade out nav-menu">
+            <a class="col-md-6 col-xs-6 nav-item" href="#/">
+                <i class="fa fa-home fa-5x"></i>
+                <h1><span class="caption">Home</span></h1>
+            </a>
+            <a class="col-md-6 col-xs-6  nav-item" href="#/me">
+                <span class="fa fa-user fa-5x"></span>
+                <h1><span class="caption">About Me</span></h1>
+            </a>
+            <a class="col-md-6 col-xs-6  nav-item" href="#/works">
+                <span class="fa fa-code fa-5x"></span>
+                <h1><span class="caption">Works</span></h1>
+            </a>
+            <a class="col-md-6 col-xs-6  nav-item" href="#/connect">
+                <span class="fa fa-link fa-5x"></span>
+                <h1><span class="caption">Connect</span></h1>
+            </a>
+            
+        </div>
+    </nav>
+    <script>
+        var navBtn = document.getElementById('navbtn');
+        var navMenu = document.getElementById('nav-menu');
 
-		<div class="logo-group col-md-12 col-sm-6 col-xs-5">
-		<h4>Package Managers</h4>
-		<ul class="logo-group">			
-			<li class="logo-holder" ng-repeat="packageManager in resumeDetails.technologies.packageManagers"> <img src=".\src\logos\{{packageManager}}.svg" class="logo"> {{packageManager}}</li>
-		</ul>
-		</div>
+        navBtn.onclick = function () {
+            if (navBtn.classList.contains("close")) {
+                navBtn.classList.remove("close");
+                navMenu.classList.add("out");
+                navMenu.classList.remove("in");
+            }
+            else {
+                navBtn.classList.add("close");
+                navMenu.classList.add("in");
+                navMenu.classList.remove("out");
+            }
+        }
+    </script>
 
-		<div class="logo-group col-md-12 col-sm-12 col-xs-2">
-		<h4>Task Runner</h4>
-		<ul class="logo-group">			
-			<li class="logo-holder" ng-repeat="taskRunner in resumeDetails.technologies.taskRunner"> <img src=".\src\logos\{{taskRunner}}.svg" class="logo"> {{taskRunner}}</li>
-		</ul>
-		</div>
-		
-	</div>
-	<div class="col-md-8 pull-left" >
-		<h3><i class="fa fa-star"></i> <b>Objective</b></h3>
-		<p>{{resumeDetails.objective}}</p>
-		<hr>
+    <div class="container" ng-view></div>
 
-		<h3><i class="fa fa-graduation-cap"></i> <b>Education</b></h3>
-		<h4>{{resumeDetails.education.school}} <small class="pull-right">{{resumeDetails.education.year}}</small></h3>
-		<p>{{resumeDetails.education.location}}</p>
-		<p>{{resumeDetails.education.course}} </p>		
-
-		<hr>
-		<h3><i class="fa fa-certificate"></i> <b>Experiences</b></h3>
-		<div ng-repeat="exp in resumeDetails.experience">
-			<h4><b>{{exp.employer}}</b> <small class="pull-right">{{exp.startDate | date: "MMM dd yyyy"}} - {{exp.endDate | date: "MMM dd yyyy"}}</small></h3>
-			<h4>Projects</h4>
-			<ul>
-				<li ng-repeat="project in exp.projects">
-					<h5><strong>{{project.name}}</strong></h5>
-					<p ng-show="project.url"><i class="fa fa-globe"></i> {{project.url}}</p>
-					<p><i class="fa fa-align-justify"></i> {{project.description}}</p>
-					<h4>Technologies Used</h4>
-					<img src="src\logos\{{tech}}.svg" ng-repeat="tech in project.technologies" class="logo project">
-					<h4>Contributions</h4>
-					<ul>
-						<li ng-repeat="contrib in project.contributions"> {{contrib}}</li>
-					</ul>
-					<hr>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<!--<div class="footer"> <p>&nbsp;Powered By: <strong><i class="fa fa-check-circle"></i>Ready to print! </strong></p>
-	<a href="https://angularjs.org/" target="_blank"><img src="src\logos\AngularJS.svg"></a>
-	<a href="http://www.getbootstrap.com" target="_blank"><img src="src\logos\Bootstrap.svg"></a>
-	<a href="http://www.github.com/kenblizzard/resume" target="_blank"><img src="src\logos\github.svg"></a>
-</div>-->
 </body>
 </html>

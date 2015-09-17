@@ -1,4 +1,13 @@
-angular.module('resume',[])
+angular.module('resume', ['ngRoute'])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/', {
+            templateUrl: "src/views/welcome.html",
+        })
+        .when('/me', {
+            templateUrl: "src/views/main.html",
+            controller: "MainController"
+        });
+    }])
 	.factory('ResumeDetailsFactory', function() {
 
 		var resumeDetails = {
@@ -23,6 +32,22 @@ angular.module('resume',[])
 				database: ["MongoDB", "PostgresSQL", "MySQL"]
 			},
 			experience: [
+                {
+                    employer: "Pinoy Programmers League - Non-profit Organization (Member)",
+                    startDate: new Date(2015, 7, 14),
+                    endDate: "Present",
+                    projects: [{
+                        name: "PPL Main Site",
+                        url: "http://main.pinoyprogleague.eu.org",
+                        description: "The home site of the organization",
+                        technologies: ["AngularJS","Bootstrap", "HTML5", "CSS","Javascript"],
+                        contributions: [
+                            "Implemented in html/css/javascript the web design made by our Graphics Designer",
+                            "Implemented the site using AngularJS Framework",
+                            "Implemented the responsive view using Bootstrap"
+                            ]
+                    }]
+                },
 				{
 					employer: "Seansoft Corporation",
 					startDate: new Date(2015,3, 1),

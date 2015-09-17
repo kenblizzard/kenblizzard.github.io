@@ -1,0 +1,103 @@
+
+button {
+    display: inline-block;
+    margin: 0 1em;
+    border: none;
+    background: none;
+}
+
+    button span {
+        display: block;
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+.grid-button {
+    padding: 2rem;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    right: 3%;
+    top: 2%;
+    z-index: 1000;
+    height: 50px;
+    border: none !important;
+    text-decoration: none;
+}
+
+    .grid-button .grid {
+        width: 1rem;
+        height: 1rem;
+        background: cyan;
+        color: cyan;
+        /* Not in use when the colors are specified below */
+        transition: 0.3s;
+    }
+
+    .grid-button.close .grid {
+        -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8);
+        transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8);
+    }
+
+    .grid-button.rearrange .grid {
+        box-shadow: -1.25rem -1.25rem, 0 -1.25rem, 1.25rem -1.25rem, -1.25rem 0, 1.25rem 0, -1.25rem 1.25rem, 0 1.25rem, 1.25rem 1.25rem;
+    }
+
+    .grid-button.rearrange.close .grid {
+        box-shadow: 0 -1rem, 0 -2rem, 1rem 0, -2rem 0, 2rem 0, -1rem 0, 0 2rem, 0 1rem;
+    }
+
+
+.fade.in {
+    visibility: visible;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.fade.out {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(startYposition);
+        transform: translateY(-90deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(180deg);
+        transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(endYposition);
+        transform: translateY(90deg);
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(startYposition);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(180deg);
+        transform: rotate3d(0, 0, 1, -45deg) scale3d(0.8, 0.8, 0.8);
+    }
+
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(endYposition);
+    }
+}
