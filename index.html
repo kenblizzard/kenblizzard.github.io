@@ -19,7 +19,7 @@
         <button id="navbtn" class="nav-btn grid-button rearrange " style="">
             <span class="grid"></span>
         </button>
-        <div id="nav-menu" class="container-fluid   nav-menu">
+        <div id="nav-menu" class="container-fluid rollOut   nav-menu">
             <a class="col-md-6 col-xs-6 nav-item" href="#/" data-url="index">
                 <i class="fa fa-home fa-5x"></i>
                 <h1><span class="caption">Home</span></h1>
@@ -64,10 +64,10 @@
 
             for (var i = 0; i < navItems.length; i++) {
                 navItems[i].onclick = function () {
-                    
-                    navMenu.classList.add("out");
-                    navMenu.classList.remove("in");
                     navBtn.classList.remove("close");
+                    navMenu.classList.add("rollOut");
+                    navMenu.classList.remove("rollIn");
+                    
                 }
             }
 

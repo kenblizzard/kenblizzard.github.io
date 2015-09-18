@@ -268,5 +268,5 @@ nav .nav-menu
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;	
 
-    /*visibility: hidden !important;*/
+    visibility: hidden !important;
 }
