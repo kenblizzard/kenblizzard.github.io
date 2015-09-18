@@ -16,8 +16,6 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
             templateUrl: "src/views/works.html"
         });
 
-        $locationProvider.html5Mode(true);
-
     }])
 	.factory('ResumeDetailsFactory', function () {
 
