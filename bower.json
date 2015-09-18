@@ -25,10 +25,11 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "fontawesome": "~4.4.0",
-    "bootstrap": "~3.3.5",
     "angular": "~1.4.4",
-    "angular-route": "~1.4.5"
+    "angular-animate": "~1.4.6",
+    "angular-route": "~1.4.5",
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.4.0",
+    "jquery": "~2.1.4"
   }
 }
