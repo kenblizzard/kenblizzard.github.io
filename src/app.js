@@ -104,6 +104,13 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        highlight: "I was responsible in scaffolding and structuring this web application using AngularJS. The main goal is to ensure that the adding new modules such as content-editor, and log-in page is easy and the web application is easy to maintain"
                 + '\nI also helped converting Web Design into "responsive" HTML and CSS including the effecs and animations.',
 	        technologies: ["AngularJS", "Bootstrap", "HTML5","CSS3","JQuery"]
+	    },
+	    {
+	        title: "Scrumonline",
+	        description: "A scrum tool tailored with features that suits our company's (Seansoft) development process plus employee's time and work entries, and project status reports",
+	        screenshots: [{
+	        }],
+            //highlight: "
 	    }]
 
 
