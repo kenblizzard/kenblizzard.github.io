@@ -95,6 +95,17 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	    }
 
 
+	    var works = [{
+	        title: "Pinoy Programmers League Main Site",
+	        description: "The Home site of the Pinoy Programmers League.",
+	        url: "http://main.pinoyprogleague.eu.org/",
+	        screenshots: [{
+	        }],
+	        highlight: "I was responsible in scaffolding and structuring this web application using AngularJS. The main goal is to ensure that the adding new modules such as content-editor, and log-in page is easy and the web application is easy to maintain"
+                + '\nI also helped converting Web Design into "responsive" HTML and CSS including the effecs and animations.',
+	        technologies: ["AngularJS", "Bootstrap", "HTML5","CSS3","JQuery"]
+	    }]
+
 
 	    return {
 	        getDetails: function () {

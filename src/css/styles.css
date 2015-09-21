@@ -1,8 +1,5 @@
 body
-{
-    background: -webkit-linear-gradient(120deg,rgb(0,38,58),#CCFFFF, #33CCFF,#00CCFF, rgb(0,38,58)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(120deg,rgb(0,38,58),#CCFFFF, #33CCFF,#00CCFF, rgb(0,38,58)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(120deg,rgb(0,38,58),#CCFFFF, #33CCFF,#00CCFF, rgb(0,38,58)); /* For Firefox 3.6 to 15 */
+{    
     background: rgb(0,38,58);
     background-position: center center;
     background-repeat: no-repeat;
@@ -20,9 +17,14 @@ body
 }
 
 
+::selection {
+    text-shadow: none;
+    color: cyan;
+    background: #222;
+}
+
 h1, h2, h3, h4, h5
-{
-    font-family: Segoe UI;
+{    
     color: rgb(0,175,175);
     font-weight: 300;
     letter-spacing: 1px;
@@ -362,13 +364,15 @@ nav .nav-menu
 
 .ng-enter
 {
-    animation: scaleUp 0.5s both ease-in;
+    animation: slideInRight 1.5s both ease-in;
     z-index: 8888;
 }
 
 .ng-leave
 {
-    animation: slideOutLeft 0.5s both ease-in;
+    position: absolute;
+    background-color: black;
+    animation: rotateFall 1.5s both ease-in;
     z-index: 9999;
 }
 
