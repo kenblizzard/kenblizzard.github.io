@@ -22,6 +22,8 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	    var resumeDetails = {
 	        name: "Kenneth J. Bolico",
 	        address: "Manila",
+	        occupation: "Software/Web Developer",
+            website: "kenblizzard.github.io",
 	        cellphoneNum: "09330726232",
 	        emailAddress: "kenneth.bolico@gmail.com",
 	        facebook: "facebook.com/kenneth.bolico",
@@ -42,9 +44,10 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        },
 	        experience: [
                 {
-                    employer: "Pinoy Programmers League - Non-profit Organization (Member)",
+                    employer: "Pinoy Programmers League - Non-profit Organization",
                     startDate: new Date(2015, 7, 14),
                     endDate: "Present",
+                    position: "Front-End Developer",
                     projects: [{
                         name: "PPL Main Site",
                         url: "http://main.pinoyprogleague.eu.org",
@@ -61,6 +64,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 				    employer: "Seansoft Corporation",
 				    startDate: new Date(2015, 3, 1),
 				    endDate: "Present",
+                    position: "Software Developer",
 				    projects: [{
 				        name: "Scrumonline",
 				        url: "http://node.Scrumonline.net",
@@ -79,6 +83,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 				    employer: "Devkinetics - Internship",
 				    startDate: new Date(2014, 2, 31),
 				    endDate: new Date(2014, 5, 1),
+                    position: "Java/ AngularJS Developer",
 				    projects: [{
 				        name: "ebayanihan.org",
 				        technologies: ["Java", "AngularJS", "Bootstrap", "PostgresSQL"],

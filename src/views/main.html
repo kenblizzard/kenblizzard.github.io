@@ -1,82 +1,38 @@
-﻿<div class="pt-page-rotateFall pt-page-scaleUp">
-    <div class="col-md-4 text-right">
-        <div class="">
-            <img src="src/images/kenneth.jpg" class="img img-rounded owner-pic">
-            <h2 class="text-right"><b>{{resumeDetails.name}}</b></h2>
-            <p class="text-right"><i class="fa fa-home fa-lg"></i> {{resumeDetails.address}}</p>
-            <p class="text-right"><i class="fa fa-envelope-o fa-lg"></i> {{resumeDetails.emailAddress}}</p>
-            <p class="text-right"><i class="fa fa-mobile fa-lg"></i> {{resumeDetails.cellphoneNum}}</p>
-            <p class="text-right"><i class="fa fa-github-square fa-lg"></i> {{resumeDetails.github}}</p>
-            <p class="text-right"><i class="fa fa-facebook-official fa-lg"></i> {{resumeDetails.facebook}}</p>
-            <!--<hr>-->
+﻿<section>
+    <div class="col-md-3 text-left">
+        <div class="col-md-12 col-sm-4 col-xs-12">
+            <img src="src/images/kenneth.jpg" class="img img-rounded owner-pic center-block">
         </div>
-        <!--<h3><i class="fa fa-laptop"></i><b>Technologies</b></h3>
-        <div class="logo-group col-md-12 col-sm-12 col-xs-12">
-            <h4>Web Development Tools</h4>
-            <ul>
-                <li class="logo-holder" ng-repeat="tool in resumeDetails.technologies.webDev">
-                    <img ng-src="src/logos/{{tool}}.svg" class="logo" />{{tool}}</li>
-            </ul>
+        <div class="col-md-12 col-sm-8 col-xs-12">
+            <h2><b>{{resumeDetails.name}}</b></h2>
+            <p><i class="fa fa-map-marker"></i>&nbsp;{{resumeDetails.address}}</p>
+            <p><i class="fa fa-code "></i>&nbsp;{{resumeDetails.occupation}}</p>
+            <p><i class="fa fa-globe "></i>&nbsp;{{resumeDetails.website}}</p>
         </div>
-
-        <div class="logo-group col-md-12 col-sm-6 col-xs-5">
-            <h4>Database</h4>
-            <ul class="logo-group">
-                <li class="logo-holder" ng-repeat="db in resumeDetails.technologies.database">
-                    <img ng-src="src/logos/{{db}}.svg" class="logo" />
-                    {{db}}</li>
-            </ul>
-        </div>
-
-        <div class="logo-group col-md-12 col-sm-6 col-xs-5">
-            <h4>Package Managers</h4>
-            <ul class="logo-group">
-                <li class="logo-holder" ng-repeat="packageManager in resumeDetails.technologies.packageManagers">
-                    <img ng-src="src/logos/{{packageManager}}.svg" class="logo" />
-                    {{packageManager}}</li>
-            </ul>
-        </div>
-
-        <div class="logo-group col-md-12 col-sm-12 col-xs-2">
-            <h4>Task Runner</h4>
-            <ul class="logo-group">
-                <li class="logo-holder" ng-repeat="taskRunner in resumeDetails.technologies.taskRunner">
-                    <img ng-src="src/logos/{{taskRunner}}.svg" class="logo" />
-                    {{taskRunner}}</li>
-            </ul>
-        </div>-->
 
     </div>
-    <div class="col-md-8 pull-left">
-        <h3><i class="fa fa-star"></i><b>Objective</b></h3>
+    <div class="col-md-9 pull-left">
+        <h3><i class="fa fa-star"></i><b>&nbsp;Objective</b></h3>
         <p>{{resumeDetails.objective}}</p>
         <hr>
 
-        <h3><i class="fa fa-graduation-cap"></i><b>Education</b></h3>
-        <h4>{{resumeDetails.education.school}} <small class="pull-right">{{resumeDetails.education.year}}</small>
-        </h3>
-		<p>{{resumeDetails.education.location}}</p>
+        <h3><i class="fa fa-graduation-cap"></i><b>&nbsp;Education</b></h3>
+        <h4>{{resumeDetails.education.school}} <small class="pull-right">{{resumeDetails.education.year}}</small></h4>
+        <p>{{resumeDetails.education.location}}</p>
         <p>{{resumeDetails.education.course}} </p>
 
         <hr>
-        <h3><i class="fa fa-certificate"></i><b>Experiences</b></h3>
+        <h3><i class="fa fa-certificate"></i><b>&nbsp;Experiences</b></h3>
         <div ng-repeat="exp in resumeDetails.experience">
-            <h4><b>{{exp.employer}}</b> <small class="pull-right">{{exp.startDate | date: "MMM dd yyyy"}} - {{exp.endDate | date: "MMM dd yyyy"}}</small></h3>
-			<h4>Projects</h4>
-                <ul>
-                    <li ng-repeat="project in exp.projects">
-                        <h5><strong>{{project.name}}</strong></h5>
-                        <p ng-show="project.url"><i class="fa fa-globe"></i>{{project.url}}</p>
-                        <p><i class="fa fa-align-justify"></i>{{project.description}}</p>
-                        <h4>Technologies Used</h4>
-                        <img ng-src="src\logos\{{tech}}.svg" ng-repeat="tech in project.technologies" class="logo project">
-                        <h4>Contributions</h4>
-                        <ul>
-                            <li ng-repeat="contrib in project.contributions">{{contrib}}</li>
-                        </ul>
-                        <hr>
-                    </li>
-                </ul>
+            <h4><b>{{exp.employer}}</b> <small class="pull-right">{{exp.startDate | date: "MMM dd yyyy"}} - {{exp.endDate | date: "MMM dd yyyy"}}</small></h4>
+            <p>{{exp.position}}</p>
         </div>
     </div>
-</div>
+
+</section>
+<section>
+    <div class="col-md-12">
+        <h1>Skills</h1>
+
+    </div>
+</section>
