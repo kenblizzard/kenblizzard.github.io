@@ -35,12 +35,10 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	            course: "BS Computer Science",
 	            year: "2011 - 2015"
 	        },
-	        technologies: {
-	            webDev: ["HTML5", "CSS", "Javascript", "NodeJs", "JQuery", "AngularJS", "BackboneJS", "Bootstrap", "momentjs", "Handlebars", "Faye", "Git"],
-	            packageManagers: ["NPM", "Bower"],
-	            taskRunner: ["Grunt"],
-	            withBackground: ["Java", "C_Sharp"],
-	            database: ["MongoDB", "PostgresSQL", "MySQL"]
+	        skills: {
+	            mostExperienced: ["HTML5", "CSS", "Javascript", "NodeJs", "JQuery", "AngularJS", "BackboneJS", "Bootstrap", "C#", "SQL", "Java"],
+	            basicKnowledge: ["PHP", "Laravel", "Python", "Ruby"],
+	            tools: ["Git", "NPM", "Bower", "Grunt", "Visual Studio"],	            
 	        },
 	        experience: [
                 {

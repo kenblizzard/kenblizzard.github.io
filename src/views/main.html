@@ -33,6 +33,29 @@
 <section>
     <div class="col-md-12">
         <h1>Skills</h1>
-
+        <div class="col-md-4">            
+            <h2>Most Experienced</h2>
+            <ul>
+                <li ng-repeat="skill in resumeDetails.skills.mostExperienced">
+                    {{skill}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">            
+            <h2>Basic Knowledge</h2>
+            <ul>
+                <li ng-repeat="skill in resumeDetails.skills.basicKnowledge">
+                    {{skill}}
+                </li>
+            </ul>
+        </div>
+         <div class="col-md-4">            
+            <h2>Tools</h2>
+            <ul>
+                <li ng-repeat="skill in resumeDetails.skills.tools">
+                    {{skill}}
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
