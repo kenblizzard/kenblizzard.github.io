@@ -176,6 +176,16 @@ nav .nav-menu
         color: rgb(0,38,58);
     }
 
+.btn
+{
+    color: white;
+}
+
+    .btn:hover
+    {
+        color: cyan;
+    }
+
 
 @-webkit-keyframes rollIn
 {
