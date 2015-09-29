@@ -1,12 +1,12 @@
 body
 {    
-    background: black;
+    background: whitesmoke;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: Segoe UI ;
-    color: white;
+    color: black;
     overflow-x: hidden;
 }
 
@@ -19,15 +19,15 @@ body
 
 
 ::selection {
-    text-shadow: none;
-    color: cyan;
-    background: #222;
+    text-shadow: none;    
+    background: rgba(0,0,0,0.8);
+    color: white;
 }
 
 h1, h2, h3, h4, h5
 {    
     color: rgb(0,175,175);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
@@ -45,16 +45,20 @@ hr
     margin-bottom: 20px !important;
 }
 
-p
+p,li
 {
     letter-spacing: .75px;
-    font-weight: 100 !important;
+    font-weight: 200 !important;
     font-size: 110%;
 }
 
 ul
 {
     padding-left: 10px;
+}
+
+li {
+    list-style: hanging;
 }
 
 li.logo-holder
@@ -164,7 +168,7 @@ nav .nav-menu
         nav .nav-menu > a.nav-item:hover
         {
             color: rgb(0,175,175) !important;
-            background-color: rgba(0,38,58,0.8) !important;
+            background-color: rgba(0,0,0,0.9) !important;
         }
 
             nav .nav-menu > a.nav-item:hover .caption
@@ -179,7 +183,7 @@ nav .nav-menu
 
 .btn
 {
-    color: white;
+    color: black;
 }
 
     .btn:hover
@@ -187,6 +191,33 @@ nav .nav-menu
         color: cyan;
     }
 
+.page-link{
+    position: absolute;
+    top: 50%;    
+    color: cyan;    
+}
+
+    .page-link.right {
+        right: 10%;
+    }
+
+    .page-link.left {
+        left: 10%;
+    }
+
+    .page-linK:hover {
+        color: black;
+    }
+
+    .page-link:active {
+        color: cyan;
+    }
+
+@media only screen and (max-width: 480px) {
+    .page-link {
+        visibility: hidden;
+    }
+}
 
 @-webkit-keyframes rollIn
 {
@@ -383,6 +414,8 @@ nav .nav-menu
 {
     position: absolute;
     background-color: black;
+    color: white;
+    padding: 30px;
     animation: rotateFall 1.5s both ease-in;
     z-index: 9999;
 }
@@ -420,4 +453,23 @@ nav .nav-menu
 .page-contact.ng-enter
 {
     animation: slideInUp 0.5s both ease-in;
+}
+
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-5deg)}
+    50%{-moz-transform:rotate(5deg)}
+    100%{-moz-transform:rotate(-5deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-5deg)}
+    50%{-webkit-transform:rotate(5deg)}
+    100%{-webkit-transform:rotate(-5deg)}
+}
+
+.my-pic {
+    -moz-animation: 2s ease normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 2s infinite ease-in-out;
+    -webkit-transform-origin:top;
+
 }
