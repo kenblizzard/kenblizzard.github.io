@@ -27,6 +27,11 @@ button {
     text-decoration: none;
 }
 
+    .grid-button .grid:hover
+    {
+        color: whitesmoke;
+        background: whitesmoke;
+    }
     .grid-button .grid {
         width: 1rem;
         height: 1rem;

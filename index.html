@@ -80,6 +80,13 @@
                 }
             }
 
+            var nextPageUrl = document.querySelectorAll('a.page-link')[0].href;
+
+            // just guessing how swiping works, I haven't looked through your library
+            document.body.onswiperight = function () {
+                alert();
+                window.location.href = nextPageUrl;
+            };
             
         }
 
