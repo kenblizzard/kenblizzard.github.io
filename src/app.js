@@ -43,7 +43,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        experience: [
                 {
                     employer: "Indra Philippines ",
-                    startDate: new Date(2015, 10, 19),
+                    startDate: new Date(2015, 9, 19),
                     endDate: "Present",
                     position: "Software Engineer",
                     projects: [{
