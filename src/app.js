@@ -42,20 +42,15 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        },
 	        experience: [
                 {
-                    employer: "Pinoy Programmers League - Non-profit Organization",
-                    startDate: new Date(2015, 7, 14),
+                    employer: "Indra Philippines ",
+                    startDate: new Date(2015, 10, 19),
                     endDate: "Present",
-                    position: "Front-End Developer",
+                    position: "Software Engineer",
                     projects: [{
-                        name: "PPL Main Site",
-                        url: "http://main.pinoyprogleague.eu.org",
-                        description: "The home site of the organization",
-                        technologies: ["AngularJS", "Bootstrap", "HTML5", "CSS", "Javascript"],
-                        contributions: [
-                            "Implemented in html/css/javascript the web design made by our Graphics Designer",
-                            "Implemented the site using AngularJS Framework",
-                            "Implemented the responsive view using Bootstrap"
-                        ]
+                        name: "Meralco Managed Services",
+                        description: "Handles the Software Support of Mainframe Applications",
+                        technologies: ["Mainframe", "NATURAL", "ADABAS"]
+                       
                     }]
                 },
 				{
