@@ -28,7 +28,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        emailAddress: "kenneth.bolico@gmail.com",
 	        facebook: "facebook.com/kenneth.bolico",
 	        github: "github.com/kenblizzard",
-	        objective: "I am a Web Developer with passion in creating website using Javascript technologies and is willing to learn alot more to become a talented Full Stack Web Developer in the near future. Also, I love codes and pizzas.",
+	        objective: "I am a Software Engineer with passion in learning anything related to Computers. I love to play games like Dota 2, GTA V, Far Cry series etc. Also, I love codes and pizzas.",
 	        education: {
 	            school: "Polytechnic University of the Philippines",
 	            location: "Sta. Mesa, Manila",
