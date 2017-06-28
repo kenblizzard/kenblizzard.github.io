@@ -36,9 +36,9 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	            year: "2011 - 2015"
 	        },
 	        skills: {
-	            mostExperienced: ["HTML5", "CSS", "Javascript", "NodeJs", "JQuery", "AngularJS", "BackboneJS", "Bootstrap", "C#", "SQL", "Java"],
-	            basicKnowledge: ["PHP", "Laravel", "Python", "Ruby"],
-	            tools: ["Git", "NPM", "Bower", "Grunt", "Visual Studio"],	            
+	            mostExperienced: ["HTML5", "CSS", "Javascript", "NodeJs", "JQuery","Bootstrap", "C#", "SQL", "Java", "Java Spring"],
+	            basicKnowledge: ["PHP", "Laravel", "Mainframe - NATURAL"],
+	            tools: ["Git", "NPM", "Bower", "Grunt", "Visual Studio", "Eclipse", "Maven"],	            
 	        },
 	        experience: [
                 {
@@ -55,8 +55,8 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
                 },
 				{
 				    employer: "Seansoft Corporation",
-				    startDate: new Date(2015, 3, 1),
-				    endDate: "Present",
+				    startDate: new Date(2015, 3, 31),
+				    endDate: new Date(2015, 10, 16),
                     position: "Software Developer",
 				    projects: [{
 				        name: "Scrumonline",
