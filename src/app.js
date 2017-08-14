@@ -28,7 +28,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        emailAddress: "kenneth.bolico@gmail.com",
 	        facebook: "facebook.com/kenneth.bolico",
 	        github: "github.com/kenblizzard",
-	        objective: "I am a Software Engineer with passion in learning anything related to Computers. I love to play games like Dota 2, GTA V, Far Cry series etc. Also, I love codes and pizzas.",
+	        objective: "I am a Software Engineer with passion in learning anything related to Computers. I love Dota 2 and pizzas.",
 	        education: {
 	            school: "Polytechnic University of the Philippines",
 	            location: "Sta. Mesa, Manila",
@@ -36,9 +36,9 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	            year: "2011 - 2015"
 	        },
 	        skills: {
-	            mostExperienced: ["HTML5", "CSS", "Javascript", "NodeJs", "JQuery","Bootstrap", "C#", "SQL", "Java", "Java Spring"],
+	            mostExperienced: ["HTML5", "CSS", "Javascript", "Java", "NodeJs", "Bootstrap",  "PostgresSQL",  "Spring", "JQuery", "Android"],
 	            basicKnowledge: ["PHP", "Laravel", "Mainframe - NATURAL"],
-	            tools: ["Git", "NPM", "Bower", "Grunt", "Visual Studio", "Eclipse", "Maven"],	            
+	            tools: ["Git", "NPM", "Bower", "Grunt", "Visual Studio", "Eclipse"],	            
 	        },
 	        experience: [
                 {
@@ -56,7 +56,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 				{
 				    employer: "Seansoft Corporation",
 				    startDate: new Date(2015, 3, 31),
-				    endDate: new Date(2015, 10, 16),
+				    endDate: new Date(2015, 9, 16),
                     position: "Software Developer",
 				    projects: [{
 				        name: "Scrumonline",

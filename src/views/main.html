@@ -31,26 +31,33 @@
         </div>
 
         <h3><i class="fa fa-code fa-fw"></i>Skills</h3>
-        <div class="col-md-4">
+        <div class="col-sm-12">
             <h4>Most Experienced</h4>
-            <ul>
-                <li ng-repeat="skill in resumeDetails.skills.mostExperienced">{{skill}}
-                </li>
-            </ul>
+            <div class=row>
+                <div ng-repeat="skill in resumeDetails.skills.mostExperienced" class="col  col-xs-6 col-sm-4 col-md-4" style="margin:5px 0px; min-height:150px; max-height:150px">
+				
+				<img src="src/logos/{{skill}}.svg" class="img img-rounded col-xs-6 col-sm-6" style="max-height:150px">		
+				{{skill}}				
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
+        <!--<div class="col-md-4">
             <h4>Basic Knowledge</h4>
             <ul>
                 <li ng-repeat="skill in resumeDetails.skills.basicKnowledge">{{skill}}
+				
                 </li>
             </ul>
-        </div>
-        <div class="col-md-4">
+        </div> -->
+        <div class="col-sm-12">
             <h4>Tools</h4>
-            <ul>
-                <li ng-repeat="skill in resumeDetails.skills.tools">{{skill}}
-                </li>
-            </ul>
+           <div class=row>
+                <div ng-repeat="skill in resumeDetails.skills.tools" class="col  col-xs-6 col-sm-4 col-md-4" style="margin:5px 0px; min-height:150px; max-height:150px">
+				
+				<img src="src/logos/{{skill}}.svg" class="img img-rounded col-xs-6 col-sm-6" style="max-height:150px">		
+				{{skill}}				
+                </div>
+            </div>
         </div>
 
     </div>
