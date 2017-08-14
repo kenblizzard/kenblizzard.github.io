@@ -38,7 +38,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	        skills: {
 	            mostExperienced: ["HTML5", "CSS", "Javascript", "Java", "NodeJs", "Bootstrap",  "PostgresSQL",  "Spring", "JQuery", "Android"],
 	            basicKnowledge: ["PHP", "Laravel", "Mainframe - NATURAL"],
-	            tools: ["Git", "NPM", "Bower", "Grunt", "Visual Studio", "Eclipse"],	            
+	            tools: ["Git", "NPM", "Bower", "Grunt", "VisualStudio", "Eclipse"],	            
 	        },
 	        experience: [
                 {
