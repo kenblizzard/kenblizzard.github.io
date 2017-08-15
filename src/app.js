@@ -36,7 +36,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	            year: "2011 - 2015"
 	        },
 	        skills: {
-	            mostExperienced: ["HTML5", "CSS", "Javascript", "Java", "NodeJs", "Bootstrap", "Spring", "JQuery", "Android", "AngularJS", "BackboneJS", "MySQL", "MongoDB", "PostgresSQL"],
+	            mostExperienced: ["HTML5", "CSS", "Javascript", "Java", "NodeJs", "Bootstrap", "Spring", "JQuery", "Android", "AngularJS", "BackboneJS", "MySQL", "PostgresSQL" , "MongoDB"],
 	            basicKnowledge: ["PHP", "Laravel", "Mainframe - NATURAL"],
 	            tools: ["Git", "NPM", "Bower", "Grunt", "VisualStudio", "Eclipse"],	            
 	        },
@@ -46,12 +46,18 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
                     startDate: new Date(2015, 9, 19),
                     endDate: "Present",
                     position: "Software Engineer",
-                    projects: [{
+                    projects: 
+					[{
                         name: "Meralco Managed Services",
                         description: "Handles the Software Support of Mainframe Applications",
-                        technologies: ["Mainframe", "NATURAL", "ADABAS"]
-                       
-                    }]
+                        technologies: ["Mainframe", "NATURAL", "ADABAS"]                      
+					},
+					{
+						name: "BPI Crystal Reports Upgrade",
+						description: "Develop batch job application and web service REST api using Java Springboot framework",
+						technologies: ["Java", "Spring", "Microsoft SQL Server", "Git", "Agile scrum"]
+						
+					}]
                 },
 				{
 				    employer: "Seansoft Corporation",
