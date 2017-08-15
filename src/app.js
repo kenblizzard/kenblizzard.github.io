@@ -21,8 +21,8 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 
 	    var resumeDetails = {
 	        name: "Kenneth J. Bolico",
-	        address: "Manila",
-	        occupation: "Software/Web Developer",
+	        address: "Manila, Philippines",
+	        occupation: "Software Engineer",
             website: "kenblizzard.github.io",
 	        cellphoneNum: "09330726232",
 	        emailAddress: "kenneth.bolico@gmail.com",
@@ -36,7 +36,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	            year: "2011 - 2015"
 	        },
 	        skills: {
-	            mostExperienced: ["HTML5", "CSS", "Javascript", "Java", "NodeJs", "Bootstrap",  "PostgresSQL",  "Spring", "JQuery", "Android"],
+	            mostExperienced: ["HTML5", "CSS", "Javascript", "Java", "NodeJs", "Bootstrap", "Spring", "JQuery", "Android", "AngularJS", "BackboneJS", "MySQL", "MongoDB", "PostgresSQL"],
 	            basicKnowledge: ["PHP", "Laravel", "Mainframe - NATURAL"],
 	            tools: ["Git", "NPM", "Bower", "Grunt", "VisualStudio", "Eclipse"],	            
 	        },

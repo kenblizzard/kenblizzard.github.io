@@ -34,10 +34,10 @@
         <div class="col-sm-12">
             <h4>Most Experienced</h4>
             <div class=row>
-                <div ng-repeat="skill in resumeDetails.skills.mostExperienced" class="col  col-xs-6 col-sm-4 col-md-4" style="margin:5px 0px; min-height:150px; max-height:150px">
+                <div ng-repeat="skill in resumeDetails.skills.mostExperienced" class="col  col-xs-6 col-sm-4 col-md-4" style="margin:20px 0px; min-height:150px; max-height:150px">
 				
-				<img src="src/logos/{{skill}}.svg" class="img img-rounded col-xs-6 col-sm-6" style="max-height:150px">		
-				{{skill}}				
+				<img src="src/logos/{{skill}}.svg" class="img img-rounded col-xs-12 col-sm-8" style="max-height:150px">		
+				<text class="col-xs-12 text-left">{{skill}}</text>
                 </div>
             </div>
         </div>
@@ -52,10 +52,10 @@
         <div class="col-sm-12">
             <h4>Tools</h4>
            <div class=row>
-                <div ng-repeat="skill in resumeDetails.skills.tools" class="col  col-xs-6 col-sm-4 col-md-4" style="margin:5px 0px; min-height:150px; max-height:150px">
+                <div ng-repeat="skill in resumeDetails.skills.tools" class="col  col-xs-6 col-sm-4 col-md-4" style="margin:20px 0px; min-height:150px; max-height:150px">
 				
-				<img src="src/logos/{{skill}}.svg" class="img img-rounded col-xs-6 col-sm-6" style="max-height:150px">		
-				{{skill}}				
+				<img src="src/logos/{{skill}}.svg" class="img img-rounded col-xs-12 col-sm-8" style="max-height:150px">		
+				<text class="col-xs-12 text-left">{{skill}}</text>
                 </div>
             </div>
         </div>
