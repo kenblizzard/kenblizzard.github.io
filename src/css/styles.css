@@ -213,7 +213,7 @@ nav .nav-menu
         color: cyan;
     }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1200px) {
     .page-link {
         visibility: hidden;
     }
