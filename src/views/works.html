@@ -2,28 +2,54 @@
     <a href="#/connect" class="page-link right"><i class="glyphicon glyphicon-chevron-right fa-5x"></i></a>
     <a href="#/me" class="page-link left"><i class="glyphicon glyphicon-chevron-left fa-5x"></i></a>
     <h1>Works</h1>
-    <h2>COL Transaction Fee Calculator</h1>
-     <form>
-         <div class="form-group">
-            <label for="numShares">Shares</label>
-            <input type="number" class="form-control" id="numShares" placeholder="No. Of Shares">
+     
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>COL Transaction Fee Calculator</h1>
         </div>
-        <div class="form-group">
-            <label for="numPricePerShare">Shares</label>
-            <input type="number" class="form-control" id="numPricePerShare" placeholder="Price per Share">
-        </div>
-        <div class="radio">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                Buy
-            </label>
-        </div>
-        <div class="radio">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                Sell
-            </label>
-        </div>
-        <button type="submit" class="btn btn-success" onClick="computeTransactionFee">Submit</button>
-     </form>
+        <div class="panel-body">
+    
+         <form class="col-md-6">
+             <div class="form-group">
+                <label for="numShares">Shares</label>
+                <input type="number" class="form-control" id="numShares" placeholder="No. Of Shares">
+            </div>
+            <div class="form-group">
+                <label for="numPricePerShare">Price Per Share</label>
+                <input type="number" class="form-control" id="numPricePerShare" placeholder="Price per Share">
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Buy
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Sell
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success" onClick="computeTransactionFee()">Submit</button>
+            <div class="form-group">
+                <label class="control-label">Email</label>            
+                <p class="form-control-static" id="totalFee"></p> 
+             </div>
+         </form>
+    </div>
 </section>
+<script>
+    function computeTransactionFee() {
+        var numberShares = document.getElementById('numShares').value;
+        var numPricePerShare = document.getElementById('numPricePerShare').value;
+        var commission = (numberShares * numPricePerShare) * 0.025;
+        var vat = commission * 0.12;
+        var PSEtransFee = (numberShares * numPricePerShare) * 0.0005;
+        var SCCP = (numberShares * numPricePerShare) * 0.001;
+        
+        var total = commission + vat + PSEtransFee + SCCP
+        document.getElementById('totalFee').text = total;
+        
+    }
+    
+</script>
