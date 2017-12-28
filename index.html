@@ -10,6 +10,24 @@
     <!--    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
     <script src="bower_components/particles/particles.min.js"></script>
+	<script>
+	    function computeTransactionFee() {
+		var numberShares = document.getElementById('numShares').value;
+		var numPricePerShare = document.getElementById('numPricePerShare').value;
+		var commission = (numberShares * numPricePerShare) * 0.025;
+		var vat = commission * 0.12;
+		var PSEtransFee = (numberShares * numPricePerShare) * 0.0005;
+		var SCCP = (numberShares * numPricePerShare) * 0.001;
+		var salesTax = 0;
+		if(document.getElementById('radioSell').checked) {
+		    salesTax = (numberShares * numPricePerShare) * 0.001;
+		}
+
+		var total = commission + vat + PSEtransFee + SCCP + salesTax;
+		document.getElementById('totalFee').text = total;
+
+	    }
+	</script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
