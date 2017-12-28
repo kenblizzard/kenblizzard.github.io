@@ -2,5 +2,28 @@
     <a href="#/connect" class="page-link right"><i class="glyphicon glyphicon-chevron-right fa-5x"></i></a>
     <a href="#/me" class="page-link left"><i class="glyphicon glyphicon-chevron-left fa-5x"></i></a>
     <h1>Works</h1>
-    <h1>Under construction</h1>
+    <h2>COL Transaction Fee Calculator</h1>
+     <form>
+         <div class="form-group">
+            <label for="numShares">Shares</label>
+            <input type="number" class="form-control" id="numShares" placeholder="No. Of Shares">
+        </div>
+        <div class="form-group">
+            <label for="numPricePerShare">Shares</label>
+            <input type="number" class="form-control" id="numPricePerShare" placeholder="Price per Share">
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Buy
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Sell
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success" onClick="computeTransactionFee">Submit</button>
+     </form>
 </section>
