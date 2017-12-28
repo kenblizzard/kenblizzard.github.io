@@ -14,17 +14,17 @@
 	    function computeTransactionFee() {
 		var numberShares = document.getElementById('numShares').value;
 		var numPricePerShare = document.getElementById('numPricePerShare').value;
-		var commission = (numberShares * numPricePerShare) * 0.025;
+		var commission = (numberShares * numPricePerShare) * 0.0025;
 		var vat = commission * 0.12;
-		var PSEtransFee = (numberShares * numPricePerShare) * 0.0005;
-		var SCCP = (numberShares * numPricePerShare) * 0.001;
+		var PSEtransFee = (numberShares * numPricePerShare) * 0.00005;
+		var SCCP = (numberShares * numPricePerShare) * 0.0001;
 		var salesTax = 0;
 		if(document.getElementById('radioSell').checked) {
-		    salesTax = (numberShares * numPricePerShare) * 0.001;
+		    salesTax = (numberShares * numPricePerShare) * 0.0001;
 		}
 
 		var total = commission + vat + PSEtransFee + SCCP + salesTax;
-		document.getElementById('totalFee').text = total;
+		document.getElementById('totalFee').innerHTML = total;
 
 	    }
 	</script>
