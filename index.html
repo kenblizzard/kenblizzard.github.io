@@ -15,6 +15,10 @@
 		var numberShares = document.getElementById('numShares').value;
 		var numPricePerShare = document.getElementById('numPricePerShare').value;
 		var commission = (numberShares * numPricePerShare) * 0.0025;
+		    
+		if(document.getElementById('checkMinimum').checked) {
+			commission = commission > 20 ? commission : 20;
+		}
 		var vat = commission * 0.12;
 		var PSEtransFee = (numberShares * numPricePerShare) * 0.00005;
 		var SCCP = (numberShares * numPricePerShare) * 0.0001;
