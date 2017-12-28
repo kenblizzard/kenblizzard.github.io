@@ -24,7 +24,7 @@
 		}
 
 		var total = commission + vat + PSEtransFee + SCCP + salesTax;
-		document.getElementById('totalFee').innerHTML = total + " PHP";
+		document.getElementById('totalFee').innerHTML = Number(total).toFixed(2) + " PHP";
 
 	    }
 	</script>
