@@ -35,10 +35,15 @@
                         Sell
                     </label>
                 </div>
+                 <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="checkMinimum"> Include minimum transaction Fee of 20.00 PHP
+                    </label>
+                </div>
                 <button type="submit" class="btn btn-success" onClick="computeTransactionFee()">Submit</button>
                 <div class="form-group row">
                     <label class="control-label">Transaction Fee</label>            
-                    <p class="form-control-static" id="totalFee"></p> 
+                    <span class="form-control-static" id="totalFee"></span> 
                  </div>
              </form>
         </div>
