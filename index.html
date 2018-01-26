@@ -29,7 +29,7 @@
 
 		var total = commission + vat + PSEtransFee + SCCP + salesTax;
 		document.getElementById('totalFee').innerHTML = Number(total).toFixed(2) + " PHP";
-		document.getElementById('totalPrice').innerHTML = ((numberShares*numPricePerShare)+Number(total).toFixed(2)) + " PHP";
+		document.getElementById('totalPrice').innerHTML = Number(((numberShares*numPricePerShare)+total)).toFixed(2) + " PHP";
 
 	    }
 	</script>
