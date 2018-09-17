@@ -1,6 +1,6 @@
 body
 {    
-    background: linear-gradient(360deg, rgb(0,80,90), rgb(0,0,0),rgb(0,38,58));
+    background: linear-gradient(360deg, rgb(255,255,255), rgb(0,0,0),rgb(0,38,58));
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
