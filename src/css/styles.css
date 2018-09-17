@@ -153,7 +153,7 @@ nav .nav-menu
 
     nav .nav-menu > .nav-item
     {
-        height: 50%;
+        height: 100%;
         text-align: center;
         border: rgba(255,255,255,0.5) solid 1px;
         padding-top: 5%;
