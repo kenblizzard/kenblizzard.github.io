@@ -12,7 +12,7 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
         .when('/connect', {
             templateUrl: "src/views/connect.html"
         })
-        .when('/works', {
+        .when('/privacy-policy', {
             templateUrl: "src/views/works.html"
         });
 
