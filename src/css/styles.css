@@ -5,7 +5,7 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-family: Segoe UI ;
+    font-family: Tahoma, Geneva, Verdana, sans-serif ;
     color: whitesmoke;
     overflow-x: hidden;
 }

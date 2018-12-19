@@ -41,11 +41,29 @@ angular.module('resume', ['ngRoute', 'ngAnimate'])
 	            tools: ["Git", "NPM", "Bower", "Grunt", "VisualStudio", "Eclipse"],	            
 	        },
 	        experience: [
+				{
+                    employer: "White Cloak Inc ",
+                    startDate: new Date(2018, 11, 26),
+                    endDate: "Present",
+                    position: "React/Front-end Software Engineer",
+                    // projects: 
+					// [{
+                    //     name: "Meralco Managed Services",
+                    //     description: "Handles the Software Support of Mainframe Applications",
+                    //     technologies: ["Mainframe", "NATURAL", "ADABAS"]                      
+					// },
+					// {
+					// 	name: "BPI Crystal Reports Upgrade",
+					// 	description: "Develop batch job application and web service REST api using Java Springboot framework",
+					// 	technologies: ["Java", "Spring", "Microsoft SQL Server", "Git", "Agile scrum"]
+						
+					// }]
+                },
                 {
                     employer: "Indra Philippines ",
                     startDate: new Date(2015, 9, 19),
-                    endDate: "Present",
-                    position: "Software Engineer",
+                    endDate: new Date(2018,10, 21),
+                    position: "Java Software Engineer",
                     projects: 
 					[{
                         name: "Meralco Managed Services",
