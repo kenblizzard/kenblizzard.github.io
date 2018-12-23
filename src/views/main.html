@@ -1,7 +1,7 @@
 ﻿<section>
     <a href="#/connect" class="page-link right"><i class="glyphicon glyphicon-chevron-right fa-5x"></i></a>
     <a href="#/" class="page-link left"><i class="glyphicon glyphicon-chevron-left fa-5x"></i></a>
-    <div class="col-md-3 text-left">
+    <div class="col-md-4 text-left">
         <div class="col-md-12 col-sm-4 col-xs-12">
             <img src="src/images/kenneth.jpg" class="img img-rounded owner-pic center-block">
         </div>
@@ -13,12 +13,13 @@
         </div>
 
     </div>
-    <div class="col-md-9 pull-left">
-        <h3><i class="fa fa-star fa-fw"></i><b>Objective</b></h3>
-        <p>{{resumeDetails.objective}}</p>
+    <div class="col-md-8 pull-left">
+        <!-- <h3><i class="fa fa-star fa-fw"></i><b>Objective</b></h3> -->
+        <br>
+        <h4 style="color: white">{{resumeDetails.objective}}</h4>
         <hr>
 
-        <h3><i class="fa fa-graduation-cap fa-fw"></i><b>Education</b></h3>
+        <h3><i class="fa fa-graduation-cap fa-fw"></i><b> Education</b></h3>
         <h4>{{resumeDetails.education.school}} <small class="pull-right">{{resumeDetails.education.year}}</small></h4>
         <p>{{resumeDetails.education.location}}</p>
         <p>{{resumeDetails.education.course}} </p>
