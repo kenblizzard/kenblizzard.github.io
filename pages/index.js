@@ -63,7 +63,7 @@ export default function Home() {
                 </p>
                 <br />
                 <p>
-                  Also have experienced working with Cloud Services and DevOps such as Amazon Web Services (EC2, S3, RDBMS, Lambda), Gitlab, Jenkins etc.
+                  Also have experienced working with Cloud Services such as Amazon Web Services (EC2, S3, RDBMS, Lambda), Gitlab, Jenkins etc.
                 </p>
                 <br />
 
@@ -162,7 +162,7 @@ export default function Home() {
                   <div className="bg-blue-600 p-1 px-3 rounded-full text-white m-1 ">
                     AntD
                   </div>
-                  <div className="bg-green-700 p-1 px-3 rounded-full text-white m-2">
+                  <div className="bg-green-700 p-1 px-3 rounded-full text-white m-1">
                     Google Map
                   </div>
                   <div className="bg-yellow-600 p-1 px-3 rounded-full text-white m-1 ">
