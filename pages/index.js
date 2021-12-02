@@ -4,13 +4,13 @@ import TypeAnimation from 'react-type-animation'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen background">
+    <div className="flex flex-col items-center justify-center min-h-screen background smo">
       <Head>
         <title>Kenneth Bolico</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container  flex flex-col w-full text-default">
+      <main className="container  flex flex-col w-full text-default bg-opacity-20 bg-white">
         <section className=" min-h-screen h-full w-full flex flex-col justify-center items-start px-3 space-y-8">
           <div>
             <TypeAnimation
@@ -20,11 +20,14 @@ export default function Home() {
               repeat={Infinity}
             />
           </div>
-          <div className=" divide-x-2 flex flex-row justify-start space-x-2 tracking-widest">
+          <div className=" divide-x-2 flex flex-col sm:flex-row flex-wrap justify-start space-x-2 tracking-widest">
             <h3>Software Engineer</h3>
             <h3 className="px-3">Gamer</h3>
             <h3 className="px-3">Adventurer</h3>
           </div>
+          <p>
+            Coffee is life ☕. Pizza is love 🍕.
+          </p>
         </section>
         <section className=" min-h-screen h-full w-full flex flex-col items-center px-3 text-default">
           <div className="py-5 border-t-2 border-b-2 border-dotted border-default w-full text-center my-20">
@@ -42,7 +45,7 @@ export default function Home() {
               </div>
               <div className="w-3/4 tracking-wide">
                 <h3>
-                  Fulltime Senior React Developer
+                  Senior React Developer
                 </h3>
               </div>
             </div>
@@ -55,21 +58,9 @@ export default function Home() {
               </div>
               <div className="w-3/4 tracking-wide">
                 <p>
-                  A Full Stack Software Engineer with deep passion in enhancing skills and learning more about life.
+                  A Senior Software Engineer with almost 7 years of experience in I.T industry and proven track record in developing high quality and scalable softwares in fields of Online Banking, Logistics, Travel and Energy.
                 </p>
-                <br />
-                <p>
-                  My expertise focuses primarily in front-end web development (React Javascript) but also knowledgeable with backend development using Java (Springboot) and NodeJS.
-                </p>
-                <br />
-                <p>
-                  Also have experienced working with Cloud Services such as Amazon Web Services (EC2, S3, RDBMS, Lambda), Gitlab, Jenkins etc.
-                </p>
-                <br />
 
-                <p>
-                  I also love to do gym work-outs and mountain hiking.
-                </p>
               </div>
             </div>
             <div className="flex flex-row">
@@ -137,15 +128,85 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex flex-col w-full md:w-2/3 space-y-12">
-            <div className="flex flex-row w-full space-x-10">
-              <div className="w-1/3 text-right py-2">
+            <div className="flex flex-row w-full">
+              <div className="w-1/4 py-2">
                 <h4>
-                  April 2021 - Present
+                  November 2018 - <br />Present
                 </h4>
               </div>
-              <div className="w-2/3 space-y-3">
+              <div className="w-3/4 space-y-5">
+                <h3>React Developer / Team Captain</h3>
+                <strong>White Cloak Technologies Inc</strong>
+                <a href="https://online.unionbankph.com/online-banking/login" target="_blank" className="flex flex-row space-x-2 hover:text-yellow-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  <strong>
+                    UnionBank Online
+                  </strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <div className="flex flex-row flex-wrap">
+                  <div className="bg-blue-500 p-1 px-3 rounded-full text-white m-1">
+                    ReactJS
+                  </div>
+                  <div className="bg-purple-700 p-1 px-3 rounded-full text-white m-1">
+                    Redux
+                  </div>
+                  <div className="bg-yellow-300 p-1 px-3 rounded-full text-black m-1">
+                    Javascript
+                  </div>
+                  <div className="bg-red-400 p-1 px-3 rounded-full text-white m-1">
+                    Java
+                  </div>
+                  <div className="bg-purple-700 p-1 px-3 rounded-full text-white m-1">
+                    BootstrapCSS
+                  </div>
+                  <div className="bg-blue-600 p-1 px-3 rounded-full text-white m-1 ">
+                    AntD
+                  </div>
+
+                  <div className="bg-indigo-300 p-1 px-3 rounded-full text-black m-1 ">
+                    Git
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div className="flex flex-row w-full">
+              <div className="w-1/4 py-2">
+                <h4>
+                  April 2021 - <br />Present
+                </h4>
+              </div>
+              <div className="w-3/4 space-y-5">
                 <h3>Part-time Lead Web Developer</h3>
                 <strong>Exploretale Technologies</strong>
+                <a href="https://kargax.com.ph/" target="_blank" className="flex flex-row space-x-2 hover:text-blue-900">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  <strong>
+                    KargaX
+                  </strong>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <a href="https://takefiveoutdoors.com/" target="_blank" className="flex flex-row space-x-2 hover:text-yellow-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  <strong>
+                    TakeFive Outdoors
+                  </strong>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
                 <div className="flex flex-row flex-wrap">
                   <div className="bg-blue-500 p-1 px-3 rounded-full text-white m-1">
                     ReactJS
@@ -172,112 +233,76 @@ export default function Home() {
                     Git
                   </div>
                 </div>
-                <a href="https://takefiveoutdoors.com/" target="_blank" className="flex flex-row space-x-2 hover:text-yellow-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                  <strong>
-                    TakeFive Outdoors
-                  </strong>
-
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-                <a href="https://kargax.com.ph/" target="_blank" className="flex flex-row space-x-2 hover:text-blue-900">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                  <strong>
-                    KargaX
-                  </strong>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
               </div>
             </div>
 
 
-            <div className="flex flex-row w-full space-x-10">
-              <div className="w-1/3 text-right py-2">
+            <div className="flex flex-row w-full ">
+              <div className="w-1/4 py-2">
                 <h4>
-                  November 2018 - Present
+                  October 2015 - <br />November 2018
                 </h4>
               </div>
-              <div className="w-2/3 space-y-3">
-                <h3>React Developer / Team Captain</h3>
-                <strong>White Cloak Technologies Inc</strong>
-                <div className="flex flex-row flex-wrap">
-                  <div className="bg-blue-500 p-1 px-3 rounded-full text-white m-1">
-                    ReactJS
-                  </div>
-                  <div className="bg-purple-700 p-1 px-3 rounded-full text-white m-1">
-                    Redux
-                  </div>
-                  <div className="bg-yellow-300 p-1 px-3 rounded-full text-black m-1">
-                    Javascript
-                  </div>
-                  <div className="bg-red-400 p-1 px-3 rounded-full text-white m-1">
-                    Java
-                  </div>
-                  <div className="bg-purple-700 p-1 px-3 rounded-full text-white m-1">
-                    BootstrapCSS
-                  </div>
-                  <div className="bg-blue-600 p-1 px-3 rounded-full text-white m-1 ">
-                    AntD
-                  </div>
-
-                  <div className="bg-indigo-300 p-1 px-3 rounded-full text-black m-1 ">
-                    Git
-                  </div>
-                </div>
-                <a href="https://online.unionbankph.com/online-banking/login" target="_blank" className="flex flex-row space-x-2 hover:text-yellow-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                  <strong>
-                    UnionBank Online
-                  </strong>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-row w-full space-x-10">
-              <div className="w-1/3 text-right py-2">
-                <h4>
-                  December 2015 - November 2018
-                </h4>
-              </div>
-              <div className="w-2/3 space-y-3">
+              <div className="w-3/4 space-y-3">
                 <h3>Software Engineer</h3>
                 <strong>Indra Philippines Inc</strong>
-                <div className="flex flex-row flex-wrap">
-                  <div className="bg-red-400 p-1 px-3 rounded-full text-white m-1">
-                    Java
-                  </div>
-                  <div className="bg-yellow-300 p-1 px-3 rounded-full text-black m-1">
-                    Javascript
-                  </div>
-                  <div className="bg-blue-500 p-1 px-3 rounded-full text-white m-1">
-                    ReactJS
-                  </div>
-                  <div className="bg-indigo-300 p-1 px-3 rounded-full text-black m-1 ">
-                    Git
-                  </div>
-                </div>
                 <div className="font-bold my-2 flex flex-row space-x-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                   <span>Meralco Internal Applications</span>
                 </div>
+                <div className="flex flex-row flex-wrap">
+                  <div className="bg-red-400 p-1 px-3 rounded-full text-white m-1">
+                    Java
+                  </div>
+                  <div className="bg-yellow-300 p-1 px-3 rounded-full text-black m-1">
+                    Javascript
+                  </div>
+                  <div className="bg-blue-500 p-1 px-3 rounded-full text-white m-1">
+                    ReactJS
+                  </div>
+                  <div className="bg-indigo-300 p-1 px-3 rounded-full text-black m-1 ">
+                    Git
+                  </div>
+                </div>
+              </div>
 
+            </div>
+            <div className="flex flex-row w-full ">
+              <div className="w-1/4 py-2">
+                <h4>
+                  April 2015 - <br />October 2015
+                </h4>
+              </div>
+              <div className="w-3/4 space-y-3">
+                <h3>Software Engineer</h3>
+                <strong>Seansoft Corporation</strong>
+                <div className="font-bold my-2 flex flex-row space-x-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  <span>Internal Applications</span>
+                </div>
+                <div className="flex flex-row flex-wrap">
+                  <div className="bg-green-400 p-1 px-3 rounded-full text-white m-1">
+                    NodeJS
+                  </div>
+                  <div className="bg-yellow-300 p-1 px-3 rounded-full text-black m-1">
+                    Javascript
+                  </div>
+                  <div className="bg-blue-200 p-1 px-3 rounded-full text-black m-1">
+                    BackboneJS
+                  </div>
+                  <div className="bg-indigo-300 p-1 px-3 rounded-full text-black m-1 ">
+                    Git
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+
         </section>
 
         <section className="h-1/2 w-full flex flex-col items-center px-3 text-default mb-40">
@@ -287,7 +312,7 @@ export default function Home() {
             </h2>
 
           </div>
-          <div className="flex flex-row justify-center space-x-5">
+          <div className="flex flex-row text-left space-x-5">
             <img
               src="https://media-exp1.licdn.com/dms/image/C560BAQGAH0LJBVVKYg/company-logo_200_200/0/1519907100157?e=1646265600&v=beta&t=qRNLVTjl24XQ1YZSTv2t98R5EEdwQQn2k-VL5mEB-2M"
               height="100"
@@ -303,7 +328,7 @@ export default function Home() {
         </section>
 
       </main>
-      <footer className="w-full bg-opacity-40 bg-gray-100 py-20 space-y-5 text-center">
+      <footer className="w-full  py-20 space-y-5 text-center bg-opacity-80 bg-white container">
         <div className="  flex flex-col w-full text-default text-center ">
           <h4 className="uppercase tracking-wider text-xl">
             Connect
