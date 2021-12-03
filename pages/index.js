@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className="container  flex flex-col w-full text-default bg-opacity-20 bg-white">
-        <section className=" min-h-screen h-full w-full flex flex-col justify-center items-start px-3 space-y-8">
+        <section className=" min-h-screen h-full w-full flex flex-col justify-center items-center px-3 space-y-8">
           <div>
             <TypeAnimation
               sequence={['Kenneth Bolico', 3000, '']}
