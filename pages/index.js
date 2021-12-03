@@ -328,7 +328,7 @@ export default function Home() {
         </section>
 
       </main>
-      <footer className="w-full  py-20 space-y-5 text-center bg-opacity-80 bg-white container">
+      <footer className="w-full  py-20 space-y-5 text-center bg-opacity-20 bg-white container">
         <div className="  flex flex-col w-full text-default text-center ">
           <h4 className="uppercase tracking-wider text-xl">
             Connect
