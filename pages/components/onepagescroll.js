@@ -52,6 +52,10 @@ const onePageScroll = function (element, options) {
         /*  Prepare Everything                       */
         /*-------------------------------------------*/
 
+        if (!process.browser) {
+            return
+        }
+
         _addClass(el, "onepage-wrapper")
         el.style.position = "relative";
 
