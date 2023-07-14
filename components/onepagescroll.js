@@ -14,7 +14,7 @@
  *
  * ========================================================== */
 
-const onePageScroll = function (element, options) {
+let onePageScroll = function (element, options) {
 
     var defaults = {
         sectionContainer: "section",
@@ -52,123 +52,121 @@ const onePageScroll = function (element, options) {
         /*  Prepare Everything                       */
         /*-------------------------------------------*/
 
-        if (!process.browser) {
-            return
-        }
+        if (typeof window === 'object') {
+            _addClass(el, "onepage-wrapper")
+            el.style.position = "relative";
 
-        _addClass(el, "onepage-wrapper")
-        el.style.position = "relative";
+            for (var i = 0; i < sections.length; i++) {
+                _addClass(sections[i], "ops-section")
+                sections[i].dataset.index = i + 1;
+                topPos = topPos + 100;
 
-        for (var i = 0; i < sections.length; i++) {
-            _addClass(sections[i], "ops-section")
-            sections[i].dataset.index = i + 1;
-            topPos = topPos + 100;
-
-            if (settings.pagination == true) {
-                paginationList += "<li><a data-index='" + (i + 1) + "' href='#" + (i + 1) + "'></a></li>";
-            }
-        }
-
-        _swipeEvents(el);
-        document.addEventListener("swipeDown", function (event) {
-            if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
-            self.moveUp(el);
-        });
-        document.addEventListener("swipeUp", function (event) {
-            if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
-            self.moveDown(el);
-        });
-
-        // Create Pagination and Display Them
-
-        if (settings.pagination == true) {
-            var pagination = document.createElement("ul");
-            pagination.setAttribute("class", "onepage-pagination");
-
-            body.appendChild(pagination)
-            pagination.innerHTML = paginationList;
-            var posTop = (document.querySelector(".onepage-pagination").offsetHeight / 2) * -1;
-            document.querySelector(".onepage-pagination").style.marginTop = posTop;
-        }
-
-        if (window.location.hash != "" && window.location.hash != "#1") {
-            var init_index = window.location.hash.replace("#", ""),
-                next = document.querySelector(settings.sectionContainer + "[data-index='" + (init_index) + "']"),
-                next_index = next.dataset.index;
-
-            _addClass(document.querySelector(settings.sectionContainer + "[data-index='" + init_index + "']"), "active")
-            _addClass(body, "viewing-page-" + init_index)
-            if (settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
-
-            if (next) {
-                _addClass(next, "active")
-                if (settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
-
-                body.className = body.className.replace(/\bviewing-page-\d.*?\b/g, '');
-                _addClass(body, "viewing-page-" + next_index)
-                if (history.replaceState && settings.updateURL == true) {
-                    var href = window.location.href.substr(0, window.location.href.indexOf('#')) + "#" + (init_index);
-                    history.pushState({}, document.title, href);
+                if (settings.pagination == true) {
+                    paginationList += "<li><a data-index='" + (i + 1) + "' href='#" + (i + 1) + "'></a></li>";
                 }
             }
-            var pos = ((init_index - 1) * 100) * -1;
-            _transformPage(el, settings, pos, init_index);
 
-        } else {
-            _addClass(document.querySelector(settings.sectionContainer + "[data-index='1']"), "active");
-            _addClass(body, "viewing-page-1");
-            if (settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a[data-index='1']"), "active");
-        }
+            _swipeEvents(el);
+            document.addEventListener("swipeDown", function (event) {
+                if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
+                self.moveUp(el);
+            });
+            document.addEventListener("swipeUp", function (event) {
+                if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
+                self.moveDown(el);
+            });
 
-        const _paginationHandler = function () {
-            var page_index = this.dataset.index;
-            moveTo(el, page_index);
-        }
+            // Create Pagination and Display Them
 
+            if (settings.pagination == true) {
+                var pagination = document.createElement("ul");
+                pagination.setAttribute("class", "onepage-pagination");
 
-        if (settings.pagination == true) {
-            var pagination_links = document.querySelectorAll(".onepage-pagination li a");
-
-            for (var i = 0; i < pagination_links.length; i++) {
-                pagination_links[i].addEventListener('click', _paginationHandler);
+                body.appendChild(pagination)
+                pagination.innerHTML = paginationList;
+                var posTop = (document.querySelector(".onepage-pagination").offsetHeight / 2) * -1;
+                document.querySelector(".onepage-pagination").style.marginTop = posTop;
             }
-        }
+
+            if (window.location.hash != "" && window.location.hash != "#1") {
+                var init_index = window.location.hash.replace("#", ""),
+                    next = document.querySelector(settings.sectionContainer + "[data-index='" + (init_index) + "']"),
+                    next_index = next.dataset.index;
+
+                _addClass(document.querySelector(settings.sectionContainer + "[data-index='" + init_index + "']"), "active")
+                _addClass(body, "viewing-page-" + init_index)
+                if (settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
+
+                if (next) {
+                    _addClass(next, "active")
+                    if (settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + init_index + "']"), "active");
+
+                    body.className = body.className.replace(/\bviewing-page-\d.*?\b/g, '');
+                    _addClass(body, "viewing-page-" + next_index)
+                    if (history.replaceState && settings.updateURL == true) {
+                        var href = window.location.href.substr(0, window.location.href.indexOf('#')) + "#" + (init_index);
+                        history.pushState({}, document.title, href);
+                    }
+                }
+                var pos = ((init_index - 1) * 100) * -1;
+                _transformPage(el, settings, pos, init_index);
+
+            } else {
+                _addClass(document.querySelector(settings.sectionContainer + "[data-index='1']"), "active");
+                _addClass(body, "viewing-page-1");
+                if (settings.pagination == true) _addClass(document.querySelector(".onepage-pagination li a[data-index='1']"), "active");
+            }
+
+            const _paginationHandler = function () {
+                var page_index = this.dataset.index;
+                moveTo(el, page_index);
+            }
+
+
+            if (settings.pagination == true) {
+                var pagination_links = document.querySelectorAll(".onepage-pagination li a");
+
+                for (var i = 0; i < pagination_links.length; i++) {
+                    pagination_links[i].addEventListener('click', _paginationHandler);
+                }
+            }
 
 
 
-        document.addEventListener('mousewheel', _mouseWheelHandler);
-        document.addEventListener('DOMMouseScroll', _mouseWheelHandler);
+            document.addEventListener('mousewheel', _mouseWheelHandler);
+            document.addEventListener('DOMMouseScroll', _mouseWheelHandler);
 
 
-        if (settings.responsiveFallback != false) {
-            window.onresize = function () {
+            if (settings.responsiveFallback != false) {
+                window.onresize = function () {
+                    _responsive();
+                }
+
                 _responsive();
             }
 
-            _responsive();
-        }
+            const _keydownHandler = function (e) {
+                var tag = e.target.tagName.toLowerCase();
 
-        const _keydownHandler = function (e) {
-            var tag = e.target.tagName.toLowerCase();
-
-            if (!_hasClass(body, "disabled-onepage-scroll")) {
-                switch (e.which) {
-                    case 38:
-                        if (tag != 'input' && tag != 'textarea') self.moveUp(el)
-                        break;
-                    case 40:
-                        if (tag != 'input' && tag != 'textarea') self.moveDown(el)
-                        break;
-                    default: return;
+                if (!_hasClass(body, "disabled-onepage-scroll")) {
+                    switch (e.which) {
+                        case 38:
+                            if (tag != 'input' && tag != 'textarea') self.moveUp(el)
+                            break;
+                        case 40:
+                            if (tag != 'input' && tag != 'textarea') self.moveDown(el)
+                            break;
+                        default: return;
+                    }
                 }
+                return false;
+            }
+
+            if (settings.keyboard == true) {
+                document.onkeydown = _keydownHandler;
             }
             return false;
         }
-
-        if (settings.keyboard == true) {
-            document.onkeydown = _keydownHandler;
-        }
-        return false;
     }
 
     /*-------------------------------------------------------*/
@@ -531,4 +529,5 @@ Object.extend = function (orig) {
     return orig;
 };
 
-export default onePageScroll
+
+export default onePageScroll = (typeof window === "undefined") ? null : onePageScroll
