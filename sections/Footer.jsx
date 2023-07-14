@@ -1,5 +1,5 @@
 const Footer = () => (
-  <section className="w-full flex flex-col justify-end  py-40 space-y-5 text-center bg-opacity-20 bg-white container">
+  <section className="w-full h-full flex flex-col justify-content-end justify-end  py-40 space-y-5 text-center bg-opacity-20 bg-white container">
     <div className="  flex flex-col w-full text-default text-center ">
       <h4 className="uppercase tracking-wider text-xl">Connect</h4>
     </div>

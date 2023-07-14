@@ -53,7 +53,7 @@ const profile = {
         "CSS",
         "HTML",
         "Git",
-        "REST Api",
+        "REST",
         "Responsive Design",
       ],
     },

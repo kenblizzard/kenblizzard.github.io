@@ -16,8 +16,9 @@ const SkillsColorMapping = {
     'Spring': 'bg-green-400',
     'Bootstrap': 'bg-purple-700',
     'NextJS': 'bg-gray-500',
-    'REST Api': 'bg-pink-500',
-    'Web sockets': 'bg-red-300'
+    'REST': 'bg-pink-500',
+    'Web sockets': 'bg-red-300',
+    'Spring': 'bg-green-400'
 }
 
 export default SkillsColorMapping

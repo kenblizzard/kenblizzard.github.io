@@ -8,12 +8,10 @@ import AboutMe from "../sections/AboutMe";
 import Experiences from "../sections/Experiences";
 import Footer from "../sections/Footer";
 
-export const getServerSideProps = async () => {
-  const profile = await getProfile();
-  return { props: { profile } };
-};
 
-export default function Home({ profile }) {
+
+export default function Home() {
+  const profile = getProfile();
   useEffect(() => {
     new onePageScroll(".main", {
       sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
